@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HTMLMotionProps } from "framer-motion";
 
 const Email: React.FC = () => {
+  const MotionDiv = motion.div as React.ComponentType<HTMLMotionProps<'div'>>;
+
   return (
-    <motion.div
+    <MotionDiv
       className="email"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -18,7 +21,7 @@ const Email: React.FC = () => {
       >
         <span>sanidhyashandilya13@gmail.com</span>
       </a>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

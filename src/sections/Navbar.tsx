@@ -60,9 +60,9 @@ function Navbar() {
             ease: "easeInOut",
           }}
         >
-          <a href="/">
+          <Link href="/">
             <Logo />
-          </a>
+          </Link>
         </motion.div>
         <motion.div
           className="nav-responsive-toggle"

@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import styles from '../scss/sections/Skill.module.scss';
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 const skillsData = [
   // Core AI/ML
@@ -63,24 +65,22 @@ const Skills = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleScroll = () => {
-    const nextIndex = (activeIndex + 1) % slides.length;
-    setActiveIndex(nextIndex);
-  };
-
   const handleWheel = useCallback(() => {
     if (timeoutRef.current) return;
-    handleScroll();
+
+    const nextIndex = (activeIndex + 1) % slides.length;
+    setActiveIndex(nextIndex);
+
     timeoutRef.current = setTimeout(() => {
       timeoutRef.current = null;
     }, 700);
-  }, [activeIndex]);
+  }, [activeIndex, slides.length]);
 
   useEffect(() => {
     const container = document.getElementById("skillScroller");
     container?.addEventListener("wheel", handleWheel);
     return () => container?.removeEventListener("wheel", handleWheel);
-  }, [activeIndex, handleWheel]);
+  }, [handleWheel]);
 
   return (
     <div className={styles.skillsSection} id="skills">
@@ -127,9 +127,11 @@ const Skills = () => {
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{ delay: idx * 0.05, duration: 0.6, ease: "easeOut" }}
                   >
-                    <img
+                    <Image
                       src={skill.image}
                       alt={skill.name}
+                      width={60}
+                      height={60}
                       className={styles.skillImage}
                     />
                     <p>{skill.name}</p>

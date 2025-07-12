@@ -23,7 +23,7 @@ function Contact() {
         challenges and contribute my skills and expertise to new endeavors. If
         you have any opportunities available or know of any that align with my
         aspirations, I would welcome the chance to connect and discuss further.
-        Please feel free to reach out—I'm ready and excited to embark on the
+        Please feel free to reach out—I&apos;m ready and excited to embark on the
         next chapter of my career journey.
       </p>
 
