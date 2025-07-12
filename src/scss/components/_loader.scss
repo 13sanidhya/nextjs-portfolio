@@ -9,5 +9,9 @@
   svg {
     height: 10rem;
     width: 10rem;
+    transition: transform 0.3s ease;
+  }
+  &:hover svg {
+    transform: scale(1.05); // ✅ ADDED subtle scale effect
   }
 }

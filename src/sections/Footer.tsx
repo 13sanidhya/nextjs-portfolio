@@ -10,7 +10,7 @@ function Footer() {
   });
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/koolkishan/chat-app-react-nodejs")
+    fetch("/")
       .then((response) => response.json())
       .then((json) => {
         const { stargazers_count, forks_count } = json;
@@ -25,23 +25,12 @@ function Footer() {
   return (
     <footer>
       <Link
-        href="https://github.com/koolkishan/chat-app-react-nodejs"
+        href="/"
         target="_blank"
         className="footer-link"
       >
-        <span className="footer-info">Designed and Built by Kishan Sheth.</span>
-        {githubInfo && (
-          <div className="footer-git">
-            <div className="footer-git-item">
-              <FaRegStar className="footer-git-item-icon" />
-              <span className="footer-git-item-text">{githubInfo.stars}</span>
-            </div>
-            <div className="footer-git-item">
-              <FiGitBranch className="footer-git-item-icon" />
-              <span className="footer-git-item-text">{githubInfo.forks}</span>
-            </div>
-          </div>
-        )}
+        <span className="footer-info">Sanidhya Shandilya.<br></br>All Rights Reserved</span>
+        
       </Link>
     </footer>
   );

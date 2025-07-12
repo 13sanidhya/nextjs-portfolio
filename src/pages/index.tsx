@@ -10,6 +10,9 @@ import About from "@/sections/About";
 import Contact from "@/sections/Contact";
 import Projects from "@/sections/Projects";
 import Experience from "@/sections/Experience";
+import Skills from "@/sections/Skills";
+import ScrollToTop from "@/sections/ScrollToTop";
+
 
 function Index() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,7 +26,9 @@ function Index() {
   return (
     <div className="app">
       <Head>
-        <title>Kishan Sheth</title>
+        <title>Sanidhya Shandilya</title>
+        <meta name="description" content="Sanidhya Shandilya's developer portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       {showContent && (
@@ -31,14 +36,17 @@ function Index() {
           <Navbar />
           <SocialIcons />
           <Email />
+
           <main>
             <Hero />
             <About />
             <Experience />
             <Projects />
+            <Skills />
             <Contact />
           </main>
           <Footer />
+          <ScrollToTop />
         </>
       )}
       <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />

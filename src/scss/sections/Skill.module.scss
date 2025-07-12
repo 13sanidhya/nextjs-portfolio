@@ -1,0 +1,212 @@
+.skillsSection {
+  padding-top: 3rem;
+  margin: 5rem 0 9.5rem;
+  text-align: left;
+  background: var(--background-color);
+
+  .sectionHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .sectionTitle {
+    font-size: var(--tx2large);
+    font-weight: 700;
+    color: var(--lightest-slate);
+    margin-bottom: 2rem;
+    font-family: var(--raleway);
+    position: relative;
+
+    &::before {
+      counter-increment: title;
+      content: "0" counter(title) ".";
+      margin-right: 0.5rem;
+      color: var(--theme-color);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      width: 300px;
+      height: 2px;
+      margin-left: 180px;
+      background-color: var(--lightest-navy);
+    }
+  }
+
+  .sectionSubtitle {
+    font-size: 16px;
+    color: var(--text_secondary);
+    font-weight: 400;
+    margin-top: 0.5rem;
+  }
+
+  .scrollerWrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  .verticalScroll {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .activeSlide {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    justify-items: center;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+  }
+
+  .skillItem {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #854ce6;
+    padding: 1.2rem;
+    border-radius: 12px;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    color: #e0e0e0;
+
+    p, span {
+      color: #e0e0e0;
+    }
+
+    &:hover {
+      background: rgba(133, 76, 230, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(133, 76, 230, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      width: 100px;
+      height: 100px;
+      padding: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      width: 90px;
+      height: 90px;
+      padding: 0.8rem;
+    }
+  }
+
+  .skillImage {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 6px;
+
+    @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media (max-width: 480px) {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .scrollbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    gap: 4px;
+    margin-top: 10px;
+    padding-right: 4px;
+
+    @media (max-width: 1000px) {
+      flex-direction: row;
+      height: auto;
+      padding-right: 0;
+      margin-top: 1rem;
+      gap: 8px;
+      justify-content: center;
+    }
+  }
+
+  .dot {
+    width: 2px;
+    height: 36px;
+    background-color: rgba(133, 76, 230, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px;
+    transform: skewY(8deg);
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.08);
+
+    @media (max-width: 1000px) {
+      width: 36px;
+      height: 4px;
+      transform: skewX(8deg);
+    }
+  }
+
+  .activeDot {
+    background: linear-gradient(to bottom, #854ce6, #a276ff);
+    box-shadow: 0 0 3px rgba(133, 76, 230, 0.4);
+    transform: scale(1.05) skewY(8deg);
+
+    @media (max-width: 1000px) {
+      transform: scaleX(1.2) skewX(8deg);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

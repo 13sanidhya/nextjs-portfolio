@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
           --fira-code: ${firaCode.style.fontFamily};
         }
       `}</style>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

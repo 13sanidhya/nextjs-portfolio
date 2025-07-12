@@ -7,7 +7,10 @@
   background-color: transparent;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: var(--tsm);
+  font-weight: 500;
   outline: none;
+  transition: background-color 0.3s ease;
+  
   &:hover,
   &:focus {
     background-color: var(--lightest-navy);

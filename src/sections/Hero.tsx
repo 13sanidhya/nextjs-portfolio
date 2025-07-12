@@ -15,7 +15,7 @@ function Hero() {
           delay: 0.6,
         }}
       >
-        Hi my name is
+        Hi, my name is
       </motion.h1>
       <motion.h2
         className="hero-title-large"
@@ -27,7 +27,7 @@ function Hero() {
           delay: 0.75,
         }}
       >
-        Kishan Sheth.
+        Sanidhya Shandilya.
       </motion.h2>
       <motion.h3
         className="hero-title-large hero-title-sub"
@@ -39,7 +39,7 @@ function Hero() {
           delay: 1.05,
         }}
       >
-        I craft things for the web.
+        I am an AIML Engineer.
       </motion.h3>
       <motion.p
         className="hero-text"
@@ -51,14 +51,10 @@ function Hero() {
           delay: 1.35,
         }}
       >
-        I&apos;m a software engineer with expertise in creating top-notch
-        digital experiences. My current focus is on developing products that are
-        accessible and centered around user needs, as part of the team at&nbsp;
-        <Link href="https://rapidops.com" target="_blank" className="link">
-          Rapidops.
-        </Link>
+        I&apos;m a passionate final-year Computer Science student specializing in Artificial Intelligence and Machine Learning. I love solving challenging problems, blending technology with creativity, and continuously exploring new ideas. Whether it’s building intelligent systems, analyzing data, or learning something new, I’m always driven by curiosity and a desire to create meaningful impact.
       </motion.p>
-      <motion.div
+      {/* Optional Button Section */}
+      {/* <motion.div
         className="hero-button"
         initial={{ opacity: 0, y: 5 }}
         animate={{ opacity: 1, y: 0 }}
@@ -69,10 +65,10 @@ function Hero() {
         }}
       >
         <Button
-          text="Check out my course"
-          link="https://youtube.com/kishansheth21"
+          text="Download Resume"
+          link="/Sanidhyaa_Resume.pdf"
         />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

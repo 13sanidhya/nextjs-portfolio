@@ -1,12 +1,16 @@
+// Button.tsx
 import Link from "next/link";
 import React from "react";
 
-function Button({ text, link }: { text: string; link: string }) {
-  return (
-    <Link className="btn" href={link}>
-      {text}
-    </Link>
-  );
+interface ButtonProps {
+  text: string;
+  link: string;
 }
+
+const Button: React.FC<ButtonProps> = ({ text, link }) => (
+  <Link href={link} className="btn" aria-label={`Go to ${text}`}>
+    {text}
+  </Link>
+);
 
 export default Button;

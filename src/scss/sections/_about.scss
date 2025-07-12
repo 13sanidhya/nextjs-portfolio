@@ -26,14 +26,17 @@
       }
     }
   }
+
   &-grid {
     display: grid;
     grid-template-columns: 60% 40%;
     gap: 1rem;
+
     &-info {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+
       &-text {
         color: var(--slate);
         margin-right: 10%;
@@ -42,12 +45,15 @@
         line-height: 1.6rem;
         font-weight: 500;
         font-family: var(--raleway);
+        text-align: justify; // ✅ added to justify About Me text
       }
+
       &-list {
         display: grid;
         grid-template-columns: 33% 33% 33%;
         list-style-type: none;
         padding: 0 3rem;
+
         &-item {
           font-family: var(--raleway);
           line-height: 1.6rem;
@@ -55,6 +61,7 @@
           font-size: var(--tbase);
           color: var(--slate);
           position: relative;
+
           &::before {
             content: "▹";
             position: absolute;
@@ -66,10 +73,12 @@
         }
       }
     }
+
     &-photo {
       position: relative;
       width: max-content;
       height: max-content;
+
       &:hover {
         .overlay {
           background-color: #00000000;
@@ -82,15 +91,16 @@
           filter: none;
         }
       }
+
       .overlay {
         transition: 0.3s ease-in-out;
-        z-index: 1;
         position: absolute;
         height: 350px;
         width: 350px;
         background-color: #9d00ff4d;
         border-radius: 0.2rem;
       }
+
       .overlay-border {
         z-index: -3;
         height: 100%;
@@ -102,20 +112,22 @@
         border-radius: 0.2rem;
         transition: 0.3s ease-in-out;
       }
+
       &-container {
         position: relative;
         height: 350px;
         width: 350px;
         object-fit: cover;
+
         img {
           z-index: 0;
-          filter: grayscale(100%);
           transition: 0.3s ease-in-out;
           border-radius: 0.2rem;
         }
       }
     }
   }
+
   @media screen and (max-width: 1080px) {
     margin: 5rem 0;
     &-grid {
@@ -136,8 +148,10 @@
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     margin: 5rem auto;
+
     .title {
       h2 {
         &::after {
@@ -145,29 +159,35 @@
         }
       }
     }
+
     &-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
       &-photo {
         margin-top: 3rem;
+
         .overlay {
           height: 300px;
           width: 300px;
         }
+
         &-container {
           height: 300px;
           width: 300px;
         }
       }
+
       &-info {
         &-text {
           margin-right: 0;
         }
       }
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
     }
   }
+
   @media screen and (max-width: 480px) {
     .title {
       h2 {
@@ -176,12 +196,14 @@
         }
       }
     }
+
     &-grid {
       &-photo {
         .overlay {
           height: 223px;
           width: 223px;
         }
+
         &-container {
           height: 223px;
           width: 223px;

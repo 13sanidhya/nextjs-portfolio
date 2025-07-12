@@ -3,6 +3,8 @@
   display: inline-block;
   position: relative;
   color: var(--theme-color);
+  font-weight: 500; 
+  transition: color 0.25s ease;
   &:after {
     content: "";
     position: absolute;

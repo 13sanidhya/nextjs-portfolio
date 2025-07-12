@@ -1,85 +1,66 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React,{useRef} from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { motion } from "framer-motion";
+import { motion,useInView } from "framer-motion";
 
 function Projects() {
   const projectsData = [
     {
-      image: "/project1.png",
-      projectName: "Pokedex",
+      image: "/cctv.jpg",
+      projectName: "Smart CCTV Surveillance System",
       projectLink: "https://netlify.com",
       projectDescription:
-        "This is a web application that uses the PokeAPI to display information about different Pokemon, including their evolution levels and details. You can compare multiple Pokemon using a queue, and add them to your personal list using Firebase's Firestore database.",
-      projectTech: [
-        "React",
-        "Redux Toolkit",
-        "SCSS",
-        "Firebase",
-        "Typescript",
-        "PokeApi",
-      ],
+        "Harnessing existing CCTV networks, our project integrates AI and ML technologies for enhanced Crowd Management, Crime Prevention, and Work Monitoring. Through facial recognition, weapon detection, violence detection, and crowd analysis, we aim to bolster security and optimize operational efficiency, ensuring public safety and productivity.",
+      projectTech: [],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/13sanidhya",
+        externalLink: "https://github.com/13sanidhya/CCTV-surveillance-system",
       },
     },
     {
-      image: "/project2.png",
-      projectName: "Realtime Chat App",
+      image: "/crop_recommend.jpg",
+      projectName: "AgroGenius",
       projectLink: "https://netlify.com",
       projectDescription:
-        "This is a chat app made with React and Node.js that sends real-time messages and is highly scalable. It uses advanced JavaScript concepts like debouncing and is optimized for React. It has 300+ stars on GitHub and over 180k views on YouTube.",
-      projectTech: [
-        "React",
-        "Sockets",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Styled Components",
-      ],
+        "A sophisticated agricultural recommendation system that guides farmers in optimal crop selection and fertilizer usage based on specific soil conditions. Utilizing advanced algorithms and data analytics, the system provides tailored advice to farmers, enhancing crop yield, reducing costs, and promoting sustainable farming practices.",
+      projectTech: [],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/13sanidhya",
+        externalLink:
+          "https://github.com/13sanidhya/agriculture-and-crop-management-system",
       },
     },
     {
-      image: "/project3.png",
-      projectName: "Netflix App",
+      image: "/SSLMS.jpeg",
+      projectName: "Smart Street Light Monitoring System",
       projectLink: "https://netlify.com",
       projectDescription:
-        "I made a Netflix copy with TMBD Api. It has infinite scrolling and lets you watch movies by genre. You can also add movies to your favorites list.",
-      projectTech: [
-        "React",
-        "Node.js",
-        "Firebase",
-        "MongoDB",
-        "Express",
-        "Redux Toolkit",
-      ],
+        "Automatic monitoring of street lights, adjusting brightness or turning them on/off based on real-time data. This helps in saving energy, reducing costs, and improving overall urban lighting efficiency. It also enables timely maintenance by detecting faulty lights, ensuring well-lit and safer streets while conserving energy resource.",
+      projectTech: [],
       projectExternalLinks: {
-        github: "",
-        externalLink: "",
+        github: "https://github.com/13sanidhya",
+        externalLink:
+          "https://github.com/13sanidhya/Smart-Street-Light-Monitoring-System",
       },
     },
   ];
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-100px", once: false });
+
   return (
     <div className="projects" id="work">
       <motion.div
         className="title"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        variants={{
-          visible: { opacity: 1, y: -50 },
-          hidden: { opacity: 0, y: 0 },
-        }}
       >
         <h2>Some Things I’ve Built</h2>
       </motion.div>
-      <div className="projects-container">
+
+      <div className="projects-container" ref={ref}>
         {projectsData.map(
           ({
             image,
@@ -88,61 +69,73 @@ function Projects() {
             projectExternalLinks,
             projectName,
             projectTech,
-          }) => {
-            return (
+          }, index) => (
+            <motion.div
+              className="project"
+              key={projectName}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
               <motion.div
-                className="project"
-                key={projectName}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                variants={{
-                  visible: { opacity: 1, y: -50 },
-                  hidden: { opacity: 0, y: 0 },
-                }}
+                className="project-image"
+                initial={{ opacity: 0, x: -100 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
               >
-                <div className="project-image">
-                  <div className="project-image-overlay"></div>
-                  <div className="project-image-container">
-                    <Image src={image} fill alt={projectName} quality={100} />
-                  </div>
-                </div>
-                <div className="project-info">
-                  <p className="project-info-overline">Featured Project</p>
-                  <h3 className="project-info-title">{projectName}</h3>
-                  <div className="project-info-description">
-                    <p>{projectDescription}</p>
-                  </div>
-                  <ul className="project-info-tech-list">
-                    {projectTech.map((tech) => (
-                      <li className="project-info-tech-list-item" key={tech}>
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                  <ul className="project-info-links">
-                    <li className="project-info-links-item">
-                      <Link
-                        href={projectExternalLinks.github}
-                        className="project-info-links-item-link"
-                      >
-                        <FiGithub />
-                      </Link>
-                    </li>
-                    <li className="project-info-links-item">
-                      <Link
-                        href={projectExternalLinks.externalLink}
-                        className="project-info-links-item-link"
-                      >
-                        <FiExternalLink />
-                      </Link>
-                    </li>
-                  </ul>
+                <div className="project-image-overlay"></div>
+                <div className="project-image-container">
+                  <Image src={image} fill alt={projectName} quality={100} />
                 </div>
               </motion.div>
-            );
-          }
+
+              <motion.div
+                className="project-info"
+                initial={{ opacity: 0, x: 100 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              >
+                <p className="project-info-overline">Featured Project</p>
+                <h3 className="project-info-title">{projectName}</h3>
+                <div className="project-info-description">
+                  <p>{projectDescription}</p>
+                </div>
+                <ul className="project-info-tech-list">
+                  {projectTech.map((tech) => (
+                    <li className="project-info-tech-list-item" key={tech}>
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <ul className="project-info-links">
+                  <li className="project-info-links-item">
+                    <Link
+                      href={projectExternalLinks.github}
+                      className="project-info-links-item-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FiGithub />
+                    </Link>
+                  </li>
+                  <li className="project-info-links-item">
+                    <Link
+                      href={projectExternalLinks.externalLink}
+                      className="project-info-links-item-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FiExternalLink />
+                    </Link>
+                  </li>
+                </ul>
+              </motion.div>
+            </motion.div>
+          )
         )}
       </div>
     </div>

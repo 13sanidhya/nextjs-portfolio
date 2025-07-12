@@ -8,7 +8,32 @@
   --light-slate: #ccd6f6;
   --lightest-slate: #a8b2d1;
   --theme-color: #9d00ff;
+  --text_primary: #ffffff;
+  --text_secondary: #8892b0;
+  --card: #112240;
 }
+
+.scrollToTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #854ce6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(133, 76, 230, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #a276ff;
+    transform: scale(1.1);
+  }
+}
+
 
 ::-moz-selection {
   color: white;
@@ -23,6 +48,7 @@
 html,
 body {
   scroll-behavior: smooth !important;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -61,3 +87,4 @@ html {
   border: 3px solid var(--background-color);
   border-radius: 10px;
 }
+

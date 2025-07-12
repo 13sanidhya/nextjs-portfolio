@@ -2,35 +2,23 @@ import Link from "next/link";
 import React from "react";
 import {
   FiGithub,
-  FiInstagram,
-  FiYoutube,
+  FiFileText,
   FiLinkedin,
-  FiTwitter,
 } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 function SocialIcons() {
   const socialLinks = [
-    { name: "Github", icon: <FiGithub />, link: "https://www.github.com" },
-    {
-      name: "Youtube",
-      icon: <FiYoutube />,
-      link: "https://www.youtube.com/KishanSheth21/",
-    },
+    { name: "Github", icon: <FiGithub />, link: "https://github.com/13sanidhya" },
     {
       name: "LinkedIn",
       icon: <FiLinkedin />,
-      link: "https://www.linkedin.com/in/koolkishan/",
+      link: "https://www.linkedin.com/in/sanidhya-shandilya",
     },
     {
-      name: "Instagram",
-      icon: <FiInstagram />,
-      link: "https://instagram.com/koolkishansheth",
-    },
-    {
-      name: "Twitter",
-      icon: <FiTwitter />,
-      link: "https://twitter.com/koolkishansheth",
+      name: "Resume",
+      icon: <FiFileText />,
+      link: "resume.pdf",
     },
   ];
   return (

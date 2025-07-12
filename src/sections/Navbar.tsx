@@ -11,11 +11,9 @@ function Navbar() {
   const sectionLinks = [
     { name: "About", link: "/#about" },
     { name: "Experience", link: "/#experience" },
-    { name: "Work", link: "/#work" },
-    {
-      name: "Contact",
-      link: "/#contact",
-    },
+    { name: "Projects", link: "/#work" },
+    { name: "Skills", link:"/#skills"},
+    { name: "Contact", link: "/#contact"},
   ];
 
   useEffect(() => {
@@ -62,9 +60,9 @@ function Navbar() {
             ease: "easeInOut",
           }}
         >
-          <Link href="kishansheth.com">
+          <a href="/">
             <Logo />
-          </Link>
+          </a>
         </motion.div>
         <motion.div
           className="nav-responsive-toggle"
@@ -123,7 +121,7 @@ function Navbar() {
               delay: 0.6,
             }}
           >
-            <Button text="Resume" link="http://localhost:3000/resume.pdf" />
+            <Button text="Resume" link="/resume.pdf" />
           </motion.div>
         </div>
       </div>
