@@ -18,7 +18,7 @@ function SocialIcons() {
     {
       name: "Resume",
       icon: <FiFileText />,
-      link: "resume.pdf",
+      link: "resume_1.pdf",
     },
   ];
   return (
