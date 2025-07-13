@@ -209,4 +209,40 @@
       transform: translateY(0);
     }
   }
+
+  // 📱 Mobile horizontal scroll fix
+  @media (max-width: 768px) {
+    .verticalScroll {
+      display: flex;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .slide,
+    .activeSlide {
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    .grid {
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      min-width: max-content;
+      gap: 1rem;
+    }
+
+    .skillItem {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+
+    .scrollbar {
+      display: none;
+    }
+  }
 }

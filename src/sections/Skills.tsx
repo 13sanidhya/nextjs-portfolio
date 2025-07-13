@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState, useEffect, useCallback } from "react";
 import styles from '../scss/sections/Skill.module.scss';
 import { motion } from "framer-motion";
@@ -141,6 +142,7 @@ const Skills = () => {
             </div>
           ))}
         </div>
+
         <div className={styles.scrollbar}>
           {slides.map((_, i) => (
             <div
