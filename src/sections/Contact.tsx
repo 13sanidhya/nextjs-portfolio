@@ -18,13 +18,7 @@ function Contact() {
       <h2 className="contact-title">What&apos;s Next?</h2>
       <h2 className="contact-sub-title">Get In Touch</h2>
       <p className="contact-text">
-        I am actively seeking new opportunities for growth and advancement. My
-        passion for learning and drive to excel make me eager to explore fresh
-        challenges and contribute my skills and expertise to new endeavors. If
-        you have any opportunities available or know of any that align with my
-        aspirations, I would welcome the chance to connect and discuss further.
-        Please feel free to reach out—I&apos;m ready and excited to embark on the
-        next chapter of my career journey.
+        I&apos;m currently exploring new opportunities where I can apply my skills in AI, ML, and software development to solve meaningful problems. Whether you&apos;re hiring, collaborating, or just want to connect, feel free to reach out. I&apos;m always excited to discuss new ideas, learn from others, and contribute to impactful work. Let&apos;s connect and build something great together!
       </p>
 
       <div className="contact-cta">

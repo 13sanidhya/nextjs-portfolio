@@ -15,23 +15,21 @@ function Experience() {
   }, [selected]);
 
 
-  const experiences = 
-  [
-    {
-      name: "LNMIIT",
-      role: "Project Intern",
-      start: "May 2023",
-      end: "July 2023",
-      url:"",
-      shortDescription: 
-      [
-        "Worked on a project titled “Smart Street Light Monitoring System,” improving system reliability by 30%.",
-        "Gained hands-on experience with GSM modules, Arduino, LoRa communication, and various environmental sensors.",
-        "Designed a user-friendly interface using Tinkercad, reducing setup time by 40% and enabling online data integration with The Things Network."
-      ],
-    },
+const experiences = [
+  {
+    name: "LNMIIT",
+    role: "Project Intern",
+    start: "May 2023",
+    end: "July 2023",
+    url: "",
+    shortDescription: [
+      "Developed a 'Smart Street Light Monitoring System', improving system uptime by 30%.",
+      "Integrated GSM modules, Arduino, LoRa, and environmental sensors for real-time automation.",
+      "Built an interactive interface in Tinkercad, reducing configuration time by 40% and enabling cloud connectivity via The Things Network."
+    ],
+  },
+];
 
-  ];
 
   if (!experiences[selected]) return null;
 

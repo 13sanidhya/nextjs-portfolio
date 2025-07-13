@@ -9,10 +9,10 @@ function Projects() {
     {
       image: "/cctv.jpg",
       projectName: "Smart CCTV Surveillance System",
-      projectLink: "https://netlify.com",
+      projectLink: "https://netlify.com", // replace with actual link if deployed
       projectDescription:
-        "Harnessing existing CCTV networks, our project integrates AI and ML technologies for enhanced Crowd Management, Crime Prevention, and Work Monitoring. Through facial recognition, weapon detection, violence detection, and crowd analysis, we aim to bolster security and optimize operational efficiency, ensuring public safety and productivity.",
-      projectTech: [],
+        "An intelligent surveillance solution leveraging existing CCTV networks integrated with AI/ML models for real-time crowd monitoring, facial recognition, weapon and violence detection. Designed to enhance public safety and operational oversight.",
+      projectTech: ["Python", "YOLOv8", "OpenCV", "Deep Learning"],
       projectExternalLinks: {
         github: "https://github.com/13sanidhya",
         externalLink: "https://github.com/13sanidhya/CCTV-surveillance-system",
@@ -23,8 +23,8 @@ function Projects() {
       projectName: "AgroGenius",
       projectLink: "https://netlify.com",
       projectDescription:
-        "A sophisticated agricultural recommendation system that guides farmers in optimal crop selection and fertilizer usage based on specific soil conditions. Utilizing advanced algorithms and data analytics, the system provides tailored advice to farmers, enhancing crop yield, reducing costs, and promoting sustainable farming practices.",
-      projectTech: [],
+        "A smart crop and fertilizer recommendation system based on soil conditions, leveraging machine learning and data analytics. Designed to boost crop yield, reduce costs, and support sustainable agriculture through personalized suggestions.",
+      projectTech: ["Python", "Pandas", "Scikit-learn", "Flask"],
       projectExternalLinks: {
         github: "https://github.com/13sanidhya",
         externalLink:
@@ -36,8 +36,8 @@ function Projects() {
       projectName: "Smart Street Light Monitoring System",
       projectLink: "https://netlify.com",
       projectDescription:
-        "Automatic monitoring of street lights, adjusting brightness or turning them on/off based on real-time data. This helps in saving energy, reducing costs, and improving overall urban lighting efficiency. It also enables timely maintenance by detecting faulty lights, ensuring well-lit and safer streets while conserving energy resource.",
-      projectTech: [],
+        "IoT-based system for automated streetlight control using real-time environmental data. Integrated LoRa, GSM, and Arduino to optimize energy use, reduce maintenance costs, and enable remote monitoring via The Things Network.",
+      projectTech: ["Arduino", "LoRa", "GSM", "IoT", "The Things Network"],
       projectExternalLinks: {
         github: "https://github.com/13sanidhya",
         externalLink:
@@ -45,6 +45,7 @@ function Projects() {
       },
     },
   ];
+
 
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px", once: false });

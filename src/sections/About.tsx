@@ -28,15 +28,7 @@ function About() {
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            Bonjour! My name is Sanidhya, Passionate and enthusiastic nd year
-            student with excellent interpersonal
-            skills and a high interest in learning
-            programing languages. I enjoy playing
-            chess and have honed my strategic
-            thinking abilities through the game. I
-            am always seeking new challenges
-            and opportunities to grow both
-            personally and professionally.
+            Passionate about Artificial Intelligence and Machine Learning, I&apos;m a final-year Computer Science student who enjoys building intelligent solutions to real-world problems. With a strong foundation in programming and a mindset rooted in continuous learning, I strive to blend creativity with technology. Whether it&apos;s deploying ML models, analyzing data, or collaborating on impactful projects, I&apos;m always excited to push boundaries and grow as both a technologist and a problem solver.
           </p>
           <p className="about-grid-info-text">
             Here are a few technologies I’ve been working with recently:
