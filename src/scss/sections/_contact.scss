@@ -33,20 +33,21 @@
     text-align: center;
   }
   .contact-cta {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: center;
+    width: 100%;
 
     .btn {
       padding: 1rem 2rem;
       width: 100%;
-      max-width: 300px;
       text-align: center;
     }
+  }
 
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
+    .contact-cta {
       flex-direction: row;
       justify-content: center;
 
