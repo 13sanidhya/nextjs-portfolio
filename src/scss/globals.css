@@ -13,6 +13,7 @@
   --card: #112240;
 }
 
+/* Scroll to Top Button */
 .scrollToTopBtn {
   position: fixed;
   bottom: 2rem;
@@ -34,49 +35,57 @@
   }
 }
 
-
+/* Text Selection */
+::selection {
+  color: white;
+  background: var(--theme-color);
+}
 ::-moz-selection {
   color: white;
   background: var(--theme-color);
 }
 
-::selection {
-  color: white;
-  background: var(--theme-color);
-}
-
+/* Core HTML & Body Styles */
 html,
 body {
   scroll-behavior: smooth !important;
   scroll-padding-top: 100px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+/* Set background & reset counter */
 body {
   background-color: var(--background-color);
   counter-reset: title;
 }
 
+/* Global Transition */
 main {
   transition: 0.3s ease-in-out;
 }
 
+/* Blur Effect When Navigation is Open */
 .blur {
   filter: blur(10px);
   pointer-events: none;
   user-select: none;
 }
 
-* {
+/* Box-Sizing & Reset */
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Custom Scrollbar */
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--dark-slate) var(--background-color);
 }
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -88,4 +97,3 @@ html {
   border: 3px solid var(--background-color);
   border-radius: 10px;
 }
-
