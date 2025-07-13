@@ -209,6 +209,11 @@
       transform: translateY(0);
     }
   }
+  @media screen and (max-width: 600px) {
+  .sectionTitle::after {
+    display: none;
+  }
+}
 
   // 📱 Mobile horizontal scroll fix
   @media (max-width: 768px) {
