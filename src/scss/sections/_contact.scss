@@ -33,15 +33,26 @@
     text-align: center;
   }
   .contact-cta {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+
     .btn {
       padding: 1rem 2rem;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
     }
-  }
-}
-@media screen and (max-width: 768px) {
-  .contact {
-    margin: 4rem auto;
-    padding: 0 1rem;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+
+      .btn {
+        width: auto;
+      }
+    }
   }
 }

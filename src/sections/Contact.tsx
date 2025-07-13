@@ -43,7 +43,7 @@ function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="btn"
-          style={{ marginTop: "1rem" }}
+          // style={{ marginTop: "1rem" }}
         >
           Or write via Gmail
         </a>
