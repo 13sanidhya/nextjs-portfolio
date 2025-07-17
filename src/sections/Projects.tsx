@@ -9,7 +9,6 @@ function Projects() {
     {
       image: "/cctv.jpg",
       projectName: "Smart CCTV Surveillance System",
-      projectLink: "https://netlify.com", // replace with actual link if deployed
       projectDescription:
         "An intelligent surveillance solution leveraging existing CCTV networks integrated with AI/ML models for real-time crowd monitoring, facial recognition, weapon and violence detection. Designed to enhance public safety and operational oversight.",
       projectTech: ["Python", "YOLOv8", "OpenCV", "Deep Learning"],
@@ -21,7 +20,6 @@ function Projects() {
     {
       image: "/crop_recommend.jpg",
       projectName: "AgroGenius",
-      projectLink: "https://netlify.com",
       projectDescription:
         "A smart crop and fertilizer recommendation system based on soil conditions, leveraging machine learning and data analytics. Designed to boost crop yield, reduce costs, and support sustainable agriculture through personalized suggestions.",
       projectTech: ["Python", "Pandas", "Scikit-learn", "Flask"],
@@ -34,7 +32,6 @@ function Projects() {
     {
       image: "/SSLMS.jpeg",
       projectName: "Smart Street Light Monitoring System",
-      projectLink: "https://netlify.com",
       projectDescription:
         "IoT-based system for automated streetlight control using real-time environmental data. Integrated LoRa, GSM, and Arduino to optimize energy use, reduce maintenance costs, and enable remote monitoring via The Things Network.",
       projectTech: ["Arduino", "LoRa", "GSM", "IoT", "The Things Network"],

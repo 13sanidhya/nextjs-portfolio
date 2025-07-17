@@ -51,7 +51,7 @@ function Hero() {
           delay: 1.35,
         }}
       >
-        I&apos;m a passionate final-year Computer Science student with a focus on Artificial Intelligence and Machine Learning. I thrive on solving real-world challenges by combining innovative thinking with technical expertise. From building intelligent systems and exploring deep learning models to analyzing data and creating impactful solutions, I bring a blend of creativity, curiosity, and purpose to everything I do. I&apos;m always eager to learn, grow, and contribute to cutting-edge technology that makes a difference.
+        Passionate engineering student now in his final year, specializing in artificial intelligence and machine learning. I love confronting real-life challenges with out-of-the-box thinking and technical know-how. Combining the creativity and inquisitiveness for good, I do everything from working on intelligent systems and performing deep learning studies to data analysis and really putting solutions on the ground. I am keen on acquiring more knowledge, advancing my career, and having my share in breakthrough technology with far-reaching implications.
       </motion.p>
       {/* Optional Button Section */}
       {/* <motion.div

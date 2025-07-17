@@ -64,24 +64,27 @@ const chunk = (arr: typeof skillsData, size: number) =>
 const Skills = () => {
   const slides = chunk(skillsData, 8);
   const [activeIndex, setActiveIndex] = useState(0);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleWheel = useCallback(() => {
-    if (timeoutRef.current) return;
+  const startAutoScroll = useCallback(() => {
+    if (intervalRef.current) return;
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % slides.length);
+    }, 2500); // 2.5s per slide
+  }, [slides.length]);
 
-    const nextIndex = (activeIndex + 1) % slides.length;
-    setActiveIndex(nextIndex);
-
-    timeoutRef.current = setTimeout(() => {
-      timeoutRef.current = null;
-    }, 700);
-  }, [activeIndex, slides.length]);
+  const stopAutoScroll = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
 
   useEffect(() => {
-    const container = document.getElementById("skillScroller");
-    container?.addEventListener("wheel", handleWheel);
-    return () => container?.removeEventListener("wheel", handleWheel);
-  }, [handleWheel]);
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) startAutoScroll();
+    return stopAutoScroll;
+  }, [startAutoScroll]);
 
   return (
     <div className={styles.skillsSection} id="skills">
@@ -92,26 +95,14 @@ const Skills = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <motion.h2
-          className={styles.sectionTitle}
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Skills
-        </motion.h2>
-        <motion.p
-          className={styles.sectionSubtitle}
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
+        <motion.h2 className={styles.sectionTitle}>Skills</motion.h2>
+        <motion.p className={styles.sectionSubtitle}>
           Tools & Technologies I Thrive With
         </motion.p>
       </motion.div>
 
       <div className={styles.scrollerWrapper}>
-        <div id="skillScroller" className={styles.verticalScroll}>
+        <div className={styles.verticalScroll}>
           {slides.map((group, index) => (
             <div
               key={index}
@@ -126,7 +117,11 @@ const Skills = () => {
                     key={idx}
                     initial={{ opacity: 0, scale: 0.8, y: 20 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ delay: idx * 0.05, duration: 0.6, ease: "easeOut" }}
+                    transition={{
+                      delay: idx * 0.05,
+                      duration: 0.5,
+                      ease: "easeOut",
+                    }}
                   >
                     <Image
                       src={skill.image}

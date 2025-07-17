@@ -28,7 +28,7 @@ function About() {
       <div className="about-grid">
         <div className="about-grid-info">
           <p className="about-grid-info-text">
-            Passionate about Artificial Intelligence and Machine Learning, I&apos;m a final-year Computer Science student who enjoys building intelligent solutions to real-world problems. With a strong foundation in programming and a mindset rooted in continuous learning, I strive to blend creativity with technology. Whether it&apos;s deploying ML models, analyzing data, or collaborating on impactful projects, I&apos;m always excited to push boundaries and grow as both a technologist and a problem solver.
+            I&apos;m a very passionate person in Artificial Intelligence and Machine Learning. I am finishing my studies and being a computer engineer with the intention of building intelligent solutions for the real world. With strong programming skills and the continuous learning mentality, I aim to combine creativity with technology. Be it deploying ML models, analyzing data, or collaborating on meaningful projects, I truly have faith in breaking barriers and challenging myself as a technologist and problem solver.
           </p>
           <p className="about-grid-info-text">
             Here are a few technologies I’ve been working with recently:
