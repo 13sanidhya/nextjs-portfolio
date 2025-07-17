@@ -41,7 +41,7 @@ const skillsData = [
 
   // IoT & Deployment
   { name: "IOT", image: "/assets/skills/IOT.png" },
-  { name: "MLOps", image: "/assets/skills/MLOps.png" },
+  { name: "MLOps", image: "/assets/skills/MLOPs.png" },
 
   // Utilities & Engineering
   { name: "Prompt Engineering", image: "https://cdn-icons-png.flaticon.com/512/3094/3094833.png" },
