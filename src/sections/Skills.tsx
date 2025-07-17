@@ -20,7 +20,7 @@ const skillsData = [
   { name: "Data Analyst", image: "/assets/skills/data-analytics.png" },
   { name: "Power BI", image: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" },
   { name: "Pandas", image: "/assets/skills/panda.png" },
-  { name: "Seaborn", image: "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" },
+  { name: "Seaborn", image: "/assets/skills/seaborn.svg" },
   { name: "Matplotlib", image: "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg" },
   { name: "Numpy", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
 
